@@ -1,0 +1,11 @@
+---
+- name: Use Yum 
+  hosts: all
+  tasks:
+  - name: Install package
+    yum:
+      name: httpd
+      state: latest
+  - name: Show result
+    debug:
+      msg: "The httpd packages installed"
